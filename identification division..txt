@@ -1,0 +1,24 @@
+identification division.
+program-id. pgm.
+data division.
+working-storage section.
+     01 student-details.
+        02 studentname occurs 5 times.
+         05 name   pic A(10).
+         05 studentmarks occurs 5 times.
+         10 marks pic 9(2).
+     01 I   pic 9(1).
+     01 J   pic 9(1).
+  procedure division.
+        perform varying I from 1 by 1 until I > 5
+             accept studentname(I)
+             display studentname(I)
+           
+           perform varying J from 1 by 1 until J > 5
+               accept studentmarks(I,J)
+                display studentmarks(I,J)
+              end-perform            
+        end-perform.
+        
+    stop run.
+      
